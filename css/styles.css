@@ -1,7 +1,7 @@
 :root{
-    --background: #F2F0FE;
-    --primary: #F8AB46;
-    --secondary: #4A11F6;
+    --background: #F4EECB;
+    --primary: #dea343;
+    --secondary: #041B6C;
 }
 
 *{
@@ -43,6 +43,40 @@ header{
     display: flex;
     flex-direction: column;
     gap: .25rem;
+
+}
+
+#menulateral{
+    background-color: var(--primary);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+    width: 70%;
+    height: 95vh;
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform ease 0.40s;
+}
+
+#menulateral nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#menulateral nav ul li+li{
+    border-top: solid black 1px;
+}
+
+#menulateral nav ul li{
+    padding: 1rem 0;
+}
+
+#menulateral.ativarMenu{
+    transform: translateX(0);
 }
 
 #menu div{
@@ -80,7 +114,7 @@ a{
 
 .ativo{
     background-color: var(--primary);
-    color: var(--background);
+    color: var(--secondary);
     font-weight: bold;
 }
 
@@ -115,6 +149,7 @@ a{
 
 .cardtext{
     padding: 0.6rem;
+    background-color: var(--primary);
 }
 
 .grid a{
@@ -128,7 +163,7 @@ a{
 
 #redes{
     height: 2.8rem;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     display: flex;
     gap: 1.5rem;
     align-items: center;
@@ -136,7 +171,7 @@ a{
 }
 
 footer{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: var(--background);
     padding-bottom: .5rem;
 }
@@ -154,4 +189,48 @@ footer{
 h4{
     text-align: center;
     margin-top: 1.5rem;
+}
+
+#materialH2{
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+    text-decoration: underline;
+}
+
+#material{
+    border: solid var(--primary);
+    text-align: center;
+    padding: 8rem 0;
+    border-width: 1.5rem;
+    box-shadow: 0px 12px 42px -4px rgba(24, 39, 75, 0.12), 0px 8px 18px -6px rgba(24, 39, 75, 0.12);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#materiais{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.materialcard{
+    border: solid var(--primary);
+    border-width: 1.5rem .5rem .5rem .5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 5px;
+}
+
+.headerCard{
+    text-align: center;
+    font-size: .9rem;
+
+}
+
+.contentCard{
+    width: 30%;
 }
