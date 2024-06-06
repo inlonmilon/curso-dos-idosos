@@ -63,6 +63,10 @@ header {
 
 }
 
+#desktop{
+    display: none;
+}
+
 #logo {
     height: 2rem;
 }
@@ -121,6 +125,10 @@ main {
     border-bottom: solid 2px var(--primary);
 }
 
+#boxs{
+    display: none;
+}
+
 #anos ul {
     list-style: none;
     display: flex;
@@ -141,13 +149,22 @@ a {
 }
 
 .ativo {
+    display: block;
     background-color: var(--primary);
     color: var(--secondary);
     font-weight: bold;
 }
 
+.materialAno{
+    display: none;
+}
+
 .semestres {
     margin-top: 1.5rem;
+}
+
+.semestres h5{
+    font-size: 1.5rem;
 }
 
 .grid {
@@ -189,6 +206,10 @@ a {
     margin-top: 4.5rem;
 }
 
+#card{
+    display: none;
+}
+
 #redes {
     height: 2.8rem;
     background-color: var(--primary);
@@ -202,6 +223,10 @@ footer {
     background-color: var(--secondary);
     color: var(--background);
     padding-bottom: .5rem;
+}
+
+#footerLogo{
+    display: none;
 }
 
 #contato {
@@ -261,3 +286,210 @@ h4 {
 .contentCard {
     width: 30%;
 }
+
+@media (min-width: 768px){
+    body{
+        background-color: #faf1c2;
+    }
+
+    #desktop{
+        display: block;
+    }
+
+    #acessibilidade{
+        display: none;
+    }
+
+    #menuDesktop ul{
+        list-style: none;
+        color: white;
+        display: flex;
+        gap: 4rem;
+        font-size: 2rem;
+        justify-content: end;
+        padding: 1rem;
+    }
+
+    #menuDesktop a:hover{
+        color: #041B6C;
+        border: 3px solid #fffdfd;
+        transition: .90s ease-out;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #logo{
+        height: 4rem;
+    }
+
+    #cabecalho{
+        display: block;
+        background-color: #041b6c;
+        color: white;
+        font-size: 2rem;
+        text-decoration: underline;
+        padding: 6rem 5rem;
+        background-image: url(../imgs/banner\ \(1\).png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    #cabecalho h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    #linha{
+        display: block;
+        background-color: #d5850bb5;
+        height: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    hr{
+        width: 50%;
+    }
+
+    main{
+        margin: 0;
+    }
+
+    #padding{
+        padding: 2rem 4rem;
+    }
+
+    #anos{
+        display: none;
+    }
+
+    .ativo{
+        display: none;
+    }
+
+    #boxs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+        gap: .80rem;
+    }
+
+    .box{
+            background-color: #D5850BB5;
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+            border: none;
+    }
+
+    .materialAno{
+        display: block;
+        text-align: center;
+        font-size: 4rem;
+        color: #041b6c;
+        font-weight: 600;
+        padding-top: 1rem;
+    }
+
+    .semestres h5{
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 4rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        position: relative;
+        color: #041B6C;
+    }
+
+    .semestres h5::after, .semestres h5::before{
+        position: absolute;
+        content: "";
+        background-color: #dea343;
+        width: 20%;
+        height: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .semestres h5::after{
+        right: 20%;
+    }
+
+    .semestres h5:before{
+        left: 20%;
+    }
+
+    .grid{
+        display: grid;
+        column-gap: 8rem;
+        row-gap: 5rem;
+    }
+
+    .card{
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #ffb049e4;
+        }
+
+    .card img{
+        height: 18rem;
+    }
+
+    .cardtext{
+        height: 6rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cardtext h2{
+        font-size: 2rem;
+    }
+
+    .cardtext p{
+        font-size: 1.5rem;
+    }
+
+    #redes{
+        margin-top: 4rem;
+        height: 4rem;
+    }
+
+    #redes img{
+        height: 3rem;
+    }
+
+    #content{
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #contato{
+        margin: 0;
+    }
+
+    #localizacao{
+        text-align: left;
+    }
+
+    footer h4{
+        margin-bottom: 2rem;
+    }
+
+    #footerLogo{
+        display: block;
+        height: 10rem;
+    }
+
+    #logoFooter{
+        padding-left: 8rem;
+        padding-top: 1.5rem;
+    }
+}
+
