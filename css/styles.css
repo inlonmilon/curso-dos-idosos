@@ -60,6 +60,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 999;
 
 }
 
@@ -149,7 +150,6 @@ a {
 }
 
 .ativo {
-    display: block;
     background-color: var(--primary);
     color: var(--secondary);
     font-weight: bold;
@@ -292,6 +292,11 @@ h4 {
         background-color: #faf1c2;
     }
 
+    header{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    }
+
     #desktop{
         display: block;
     }
@@ -322,6 +327,7 @@ h4 {
 
     #logo{
         height: 4rem;
+        padding-left: 1rem;
     }
 
     #cabecalho{
@@ -364,10 +370,6 @@ h4 {
         display: none;
     }
 
-    .ativo{
-        display: none;
-    }
-
     #boxs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -382,6 +384,8 @@ h4 {
             color: white;
             font-size: 24px;
             border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
     }
 
     .materialAno{
@@ -490,6 +494,42 @@ h4 {
     #logoFooter{
         padding-left: 8rem;
         padding-top: 1.5rem;
+    }
+
+    #materialH2{
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    #material{
+        width: 70%;
+        margin: 0 14rem;
+        height: 35rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .headerCard {
+        font-size: 1.8rem;
+    }
+
+    .contentCard {
+        width: 28%;
+    }
+
+    .ativo {
+        background-color: var(--secondary);
+        font-weight: bold;
+        color: white;
+        padding: 2rem;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
     }
 }
 
