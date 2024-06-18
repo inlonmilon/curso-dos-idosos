@@ -56,10 +56,8 @@
         <h2 id="materialH2">Material: xx/xx/xxxx</h2>
 
         <section id="material">
-            <iframe
+            <iframe id="pdfViewer"
             src="https://docs.google.com/viewer?srcid=1CnscFWDvS03kO2TnzKoqHQGu83Psx877&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
-            width="1200px"
-            height="500px"
         ></iframe>
         </section>
 
@@ -147,6 +145,20 @@
         </div>
     </footer>
 
+
+    <script>
+        var parts = window.location.search.substr(1).split("&");
+        var $_GET = {};
+        const pdfViewer = document.getElementById("pdfViewer");
+        for (var i = 0; i < parts.length; i++) {
+            var temp = parts[i].split("=");
+            $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(
+                temp[1]
+            );
+        }
+
+        pdfViewer.src = $_GET["pdf"];
+    </script>
 </body>
 
 </html>
