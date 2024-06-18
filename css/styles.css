@@ -261,7 +261,7 @@ h4 {
     border-radius: 10px;
     background-color: white;
     position: relative;
-    padding-bottom: 87,5%; /* 16:9 */
+    padding-bottom: 87.5%; /* 16:9 */
     padding-top: 25px;
     height: 0;
 }
@@ -515,13 +515,11 @@ h4 {
     }
 
     #material{
-        margin: 0 14rem;
-        height: 35rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-width: 1.5rem;
-        
+        width: 70%;
     }
 
     .headerCard {
